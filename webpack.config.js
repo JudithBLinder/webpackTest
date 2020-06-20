@@ -1,0 +1,16 @@
+const path = require('path');
+
+module.exports = {
+  entry: path.join(__dirname, './src/app.js'),
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
+    rules: [
+      {
+        use: 'babel-loader',
+      },
+    ],
+  },
+};
